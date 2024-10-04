@@ -1,11 +1,20 @@
-nav.mainNav {
+header.mainHeader{
     display: flex;
     max-width: 100%;
     width: auto;
     height: 80px;
+    position: sticky;
+    top: 0;
     border-bottom: 1px solid #149ea8;
     padding: 0px 30px;
     background-color: #149ea8;
+    z-index: 9;
+}
+nav.mainNav {
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    height: inherit;
 }
 ul.navList {
     display: flex;

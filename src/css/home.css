@@ -1,0 +1,118 @@
+/* Banner Section CSS */
+
+.imageLayout,
+.bannerImage,
+.bannerLayout{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Recent Work Section CSS */
+
+section.recentWorkSection{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    padding-bottom: 36px;
+}
+.recentWorkLayout{
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.recentWorkLayout>.titleSection>h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0;
+    padding: 36px 0px;
+}
+.recentWorkContainer {
+    display: flex;
+    justify-content: space-between;
+}
+.recentWorkImage {
+    display: block;
+    padding: 0px 24px;
+    cursor: pointer;
+}
+.recentWorkImage>img{
+    border: 1px solid #e2e2e2;
+}
+.recentWorkImage:first-child{
+    padding-left: 0px;
+}
+.recentWorkImage:last-child{
+    padding-right: 0px;
+}
+
+/* User Info Section CSS */
+
+section.userInfoSection{
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    background-color: #cae5d2;
+    padding-bottom: 36px;
+}
+.userInfoLayout{
+    display: block;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+.userInfoTitle>h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0;
+    padding: 36px 0px;
+}
+form.UserInfoForm {
+    display: block;
+    max-width: 546px;
+    width: 100%;
+    margin: 0 auto;
+}
+.inputController{
+    display: block;
+    max-width: 100%;
+    width: 546px;
+}
+form.UserInfoForm input{
+    display: flex;
+    max-width: 100%;
+    width: 540px;
+    border: 1px solid #f5f5f5;
+    border-radius: 6px;
+    height: 54px;
+    margin-bottom: 24px;
+    text-indent: 16px;
+}
+form.UserInfoForm input.errorMeg{
+    border: 1px solid #ec1c24;
+}
+form.UserInfoForm input:focus{
+    outline: none;
+}
+.buttonLayout>button{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #149ea8;
+    background-color: #149ea8;
+    border-radius: 6px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}

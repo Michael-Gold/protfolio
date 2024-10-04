@@ -1,10 +1,11 @@
-import React,{createContext} from 'react';
+import React,{createContext, useState} from 'react';
 export const contactValue = createContext(); 
 export default function UserProvider({children}){   
   let userValue = {
     name: 'Michael',
     age: 32,
-    mobile: 8220663018
+    mobile: 8220663018,
+    userBanner: false,
   }
   return(
     <contactValue.Provider value={userValue}>

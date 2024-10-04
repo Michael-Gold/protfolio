@@ -6,13 +6,13 @@ export default function RecentWork(){
             </div>
             <div className="recentWorkContainer">
                 <div className="recentWorkImage">
-                    <img src="" alt="Michael UI Developer Recent Work" />
+                    <img src="/images/recent-work-joopop.png" alt="Michael UI Developer Recent Work" />
                 </div>
                 <div className="recentWorkImage">
-                    <img src="" alt="Michael UI Developer Recent Work" />
+                    <img src="/images/recent-work-mojarto.png" alt="Michael UI Developer Recent Work" />
                 </div>
                 <div className="recentWorkImage">
-                    <img src="" alt="Michael UI Developer Recent Work" />
+                    <img src="/images/recent-work-printart.png" alt="Michael UI Developer Recent Work" />
                 </div>
             </div>
         </div>
