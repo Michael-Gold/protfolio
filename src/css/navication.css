@@ -1,0 +1,34 @@
+nav.mainNav {
+    display: flex;
+    max-width: 100%;
+    width: auto;
+    height: 80px;
+    border-bottom: 1px solid #149ea8;
+    padding: 0px 30px;
+    background-color: #149ea8;
+}
+ul.navList {
+    display: flex;
+    list-style: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    height: auto;
+    justify-content: flex-end;
+    padding: 0px;
+    align-items: center;
+}
+li.listItem {
+    padding: 0px 14px;
+}
+li.listItem:first-child{
+    padding-left: 0px;
+}
+li.listItem:last-child{
+    padding-right: 0px;
+}
+li.listItem>a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #f5f5f5;
+}
