@@ -5,6 +5,12 @@
     background-color: #e2e2e2;
     padding-bottom: 30px;
 }
+.userInfoSectionLayout{
+    display: block;
+    max-width: 100%;
+    width: auto;
+    padding: 0px 24px;
+}
 .userInfoPageLayout{
     display: grid;
     max-width: 1500px;
@@ -22,7 +28,6 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .userBGLayout {
-    background-color: #ec1c24;
     display: block;
     height: 200px;
     border-radius: 40px;
@@ -82,4 +87,163 @@ span.phoneIcon>span.material-symbols-rounded{
     display: flex;
     font-size: 16px;
     padding-right: 4px;
+}
+.editDeleteIcon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+}
+.editDeleteIcon>span{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 30px;
+    color: #fff;
+}
+.userCardLayout:nth-child(1)>.userBGLayout {
+    background-color: #ccc;
+}
+.userCardLayout:nth-child(2)>.userBGLayout {
+    background-color: #ec1c24;
+}
+.userCardLayout:nth-child(3)>.userBGLayout {
+    background-color: #040720;
+}
+.userCardLayout:nth-child(4)>.userBGLayout {
+    background-color: #05ac7d;
+}
+.userCardLayout:nth-child(5)>.userBGLayout {
+    background-color: #473810;
+}
+.userCardLayout:nth-child(6)>.userBGLayout {
+    background-color: #3B2F2F;
+}
+.userCardLayout:nth-child(7)>.userBGLayout {
+    background-color: #033E3E;
+}
+.userCardLayout:nth-child(8)>.userBGLayout {
+    background-color: #808000;
+}
+.userCardLayout:nth-child(9)>.userBGLayout {
+    background-color: #006A4E;
+}
+.userCardLayout:nth-child(10)>.userBGLayout {
+    background-color: #2F0909;
+}
+
+h1.userInfoMainTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    font-size: 34px;
+}
+.deletePopup {
+    display: flex;
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000000bd;
+    border-radius: 8px;
+    justify-content: center;
+    z-index: 100;
+    align-items: center;
+    top: 0;
+}
+.deleteIconImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deleteIconImage>img{
+    width: 100px;
+    height: 100px;
+}
+.deletePopupLayout {
+    display: block;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 300px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+.deleteText>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 900;
+}
+.deleteBtnSec>button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    width: 100%;
+    height: 54px;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.deleteBtnSec>button>span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 6px;
+}
+.closeBtnSec {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+.closeBtnSec>span{
+    display: flex;
+    cursor: pointer;
+}
+.editPopup {
+    display: flex;
+    position: fixed;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000000bd;
+    border-radius: 8px;
+    justify-content: center;
+    z-index: 100;
+    align-items: center;
+    top: 0;
+}
+.editPopupLayout {
+    display: block;
+    max-width: 400px;
+    background: #ffffff;
+    padding: 20px 24px;
+    border-radius: 8px;
+    position: relative;
+}
+.editPopupTitle>p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 900;
+}
+@media only screen and (max-width: 1024px) {
+    .userInfoPageLayout{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 767px) {
+    .userInfoPageLayout{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

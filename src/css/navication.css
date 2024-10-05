@@ -38,6 +38,99 @@ li.listItem:last-child{
 }
 li.listItem>a{
     text-decoration: none;
-    font-size: 16px;
+    font-size: 18px;
     color: #f5f5f5;
 }
+
+/* General Styles */
+.mainHeader {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+  }
+  
+  .mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logoSection {
+    flex-grow: 1;
+  }
+  
+  .navList {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+  }
+  
+  /* Mobile-specific styles */
+  .menuToggle {
+    display: none;
+  }
+  
+  .mobileNavList {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    transition: left 0.3s ease-in-out;
+    padding: 20px;
+    display: none;  /* Hidden by default */
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mobileNavList.open {
+    left: 0;
+    display: flex; 
+    list-style: none;
+    margin-top: 0;
+  }
+  
+  .mobileNavList .listItem {
+    padding: 10px 0;
+  }
+  .mobileNavList .listItem>a{
+    display: flex;
+    align-items: center;
+    color: #000;
+  }
+  .menuToggle>span.material-symbols-rounded{
+    color: #fff;
+    font-size: 30px;
+  }
+  
+  /* For screens larger than 767px */
+  @media (min-width: 768px) {
+    /* Display standard navigation for larger screens */
+    .navList {
+      display: flex;
+    }
+  
+    /* Hide the mobile menu toggle button */
+    .menuToggle {
+      display: none;
+    }
+  
+    /* Hide the mobile nav */
+    .mobileNavList {
+      display: none;
+    }
+  }
+  
+  /* For screens smaller than 768px */
+  @media (max-width: 767px) {
+    ul.navList {
+      display: none;
+    }
+    .menuToggle {
+      display: block;
+      cursor: pointer;
+      font-size: 24px;
+    }
+  }
+  

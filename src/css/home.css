@@ -32,23 +32,29 @@ section.recentWorkSection{
     padding: 36px 0px;
 }
 .recentWorkContainer {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 0px 20px;
+    justify-content: center;
 }
-.recentWorkImage {
+/* .recentWorkImage {
     display: block;
     padding: 0px 24px;
     cursor: pointer;
-}
+} */
 .recentWorkImage>img{
+    display: inline;
+    max-width: 100%;
     border: 1px solid #e2e2e2;
 }
-.recentWorkImage:first-child{
+/* .recentWorkImage:first-child{
     padding-left: 0px;
 }
 .recentWorkImage:last-child{
     padding-right: 0px;
-}
+} */
 
 /* User Info Section CSS */
 
@@ -85,6 +91,7 @@ form.UserInfoForm {
     max-width: 100%;
     width: 546px;
 }
+textarea.userInfo,
 form.UserInfoForm input{
     display: flex;
     max-width: 100%;
@@ -95,9 +102,14 @@ form.UserInfoForm input{
     margin-bottom: 24px;
     text-indent: 16px;
 }
+textarea.userInfo{
+    padding-top: 10px;
+    resize: none;
+}
 form.UserInfoForm input.errorMeg{
     border: 1px solid #ec1c24;
 }
+textarea.userInfo:focus,
 form.UserInfoForm input:focus{
     outline: none;
 }
@@ -115,4 +127,9 @@ form.UserInfoForm input:focus{
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
+}
+@media only screen and (max-width: 600px) {
+    .recentWorkContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

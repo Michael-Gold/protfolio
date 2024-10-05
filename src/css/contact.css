@@ -1,0 +1,134 @@
+.contactPageLayout{
+    display: block;
+    max-width: 100%;
+    width: auto;
+    margin-bottom: 40px;
+}
+.contactLayout{
+    display: block;
+    max-width: 1200px;
+    width: auto;
+    margin: 0 auto;
+    padding: 0px 24px;
+}
+.contactMap>iframe{
+    display: block;
+    max-width: 100%;
+    width: -webkit-fill-available;
+}
+.contactContentLayout{
+    display: flex;
+    max-width: 100%;
+    width: 50%;    
+    justify-content: flex-end;
+}
+.contactFormLayout{
+    display: block;
+    max-width: 100%;
+    width: 50%;    
+}
+.inputControl>textarea{
+    padding: 10px 0px;
+}
+.inputControl>textarea,
+.inputControl>input{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    height: 54px;
+    margin-bottom: 24px;
+    text-indent: 16px;
+}
+.inputControl>textarea:focus,
+.inputControl>input:focus{
+    outline: none;
+}
+.contactContentLayout>ul{
+    padding-left: 0;
+    list-style: none;
+}
+.contactSectionLayout{
+    display: flex;
+    justify-content: space-between;
+}
+.contactContentLayout>ul>li {
+    display: flex;
+    font-size: 18px;
+    line-height: 32px;
+    align-items: center;
+    padding-bottom: 12px;
+}
+.contactContentLayout>ul>li img{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    padding-right: 8px;
+}
+.submitBtn>button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0px 34px;
+    cursor: pointer;
+    border: none;
+    background-color: #000046;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+}
+.successMessage {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background-color: #dff0d8;
+    padding: 0px 20px;
+    border-radius: 6px;
+    max-width: 100%;
+    width: 47%;
+    margin-bottom: 20px;
+}
+.successMessage>p{
+    display: flex;
+    margin: 0;
+    font-size: 16px;
+    color: #3c763d;
+}
+.successMessage>p>strong{
+    display: flex;
+    padding-right: 6px;
+}
+.contactContentLayout>ul>li a{
+    text-decoration: none;
+    color: currentColor;
+}
+.contactContentLayout>ul>li a:hover{
+    color:#3c763d;
+}
+@media only screen and (max-width: 767px) {
+    .contactSectionLayout {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        flex-wrap: wrap;
+    }
+    .contactFormLayout {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        order: 2;
+    }
+    .contactContentLayout {
+        display: flex;
+        max-width: 100%;
+        width: 100%;
+        justify-content: flex-start;
+        order: 1;
+    }
+    .successMessage{
+        width: 100%;
+    }
+}

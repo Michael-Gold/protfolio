@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { addUserInfo } from "../../slices/UserSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from 'react-router-dom';
 export default function UserInfo(){
     const dispatch = useDispatch();
+    const navigate = useNavigate();
    const [userInput, setUserInput] = useState({
         userName: '',
         userEmail: '',
-        userAge: '',
+        userRole: '',
         userMobile: '',
         userInfo: '',
     });
@@ -17,7 +19,6 @@ export default function UserInfo(){
             ...preValue, [name]:value 
         }));
     }
-    
     // Validate form
     const validate = () => {
         let errors = {};
@@ -27,7 +28,6 @@ export default function UserInfo(){
             errors.userName = "Name is required";
             valid = false;
         }
-
         // Email validation
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!userInput.userEmail) {
@@ -37,15 +37,11 @@ export default function UserInfo(){
             errors.userEmail = "Invalid email format";
             valid = false;
         }
-
-
         // Age validation
         if (!userInput.userRole.trim()) {
             errors.userAge = "Role is required";
             valid = false;
         } 
-
-
         // Mobile validation
         const mobilePattern = /^[0-9]{10}$/;  
         if (!userInput.userMobile.trim()) {
@@ -55,8 +51,6 @@ export default function UserInfo(){
             errors.userMobile = "Please enter a valid 10-digit mobile number";
             valid = false;
         }
-
-
         setFormErrors(errors);
         return valid;
     };
@@ -72,6 +66,7 @@ export default function UserInfo(){
                 userMobile: '',     
                 userInfo: '',     
             })
+            navigate('/user')
         }
     }
     return(
@@ -97,7 +92,10 @@ export default function UserInfo(){
                 </div>
                 {formErrors.userMobile && <p style={{color: 'red',marginTop: 0}}>{formErrors.userMobile}</p>}
                 <div className="inputController">
-                    <input type="text" name="userInfo" className="userInfo" placeholder="User Info" value={userInput.userInfo} onChange={(e) => handleInputValue(e)} />
+                    {/* <input type="text" name="userInfo" className="userInfo" placeholder="User Info" value={userInput.userInfo} onChange={(e) => handleInputValue(e)} /> */}
+                    <textarea name="userInfo" className="userInfo" placeholder="User Info" value={userInput.userInfo} onChange={(e) => handleInputValue(e)}>
+
+                    </textarea>
                 </div>
                 <div className="buttonLayout">                    
                     <button>Add User Info</button>
