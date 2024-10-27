@@ -8,6 +8,7 @@ import Contact from './pages/Contact';
 import Navication from './components/NavBar/Navication';
 import UserProvider from './context/UserProvider';
 import Footer from './components/footer/Footer';
+import Products from './pages/Products';
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +19,7 @@ function App() {
           <Route path='/about' element={<About />}></Route>        
           <Route path='/user' element={<User />}></Route>
           <Route path='/contact' element={<Contact />}></Route>  
+          <Route path='/products' element={<Products />}></Route>  
           <Route path='*' element={<Error402 />}></Route>
         </Routes>
         <Footer />

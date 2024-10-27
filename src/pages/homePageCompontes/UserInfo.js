@@ -11,6 +11,7 @@ export default function UserInfo(){
         userRole: '',
         userMobile: '',
         userInfo: '',
+        userProfile: '',
     });
     const [formErrors, setFormErrors] = useState({});
     const handleInputValue = (e) => {
@@ -64,7 +65,8 @@ export default function UserInfo(){
                 userEmail: '',
                 userRole: '',
                 userMobile: '',     
-                userInfo: '',     
+                userInfo: '',    
+                userProfile: '', 
             })
             navigate('/user')
         }
@@ -92,7 +94,9 @@ export default function UserInfo(){
                 </div>
                 {formErrors.userMobile && <p style={{color: 'red',marginTop: 0}}>{formErrors.userMobile}</p>}
                 <div className="inputController">
-                    {/* <input type="text" name="userInfo" className="userInfo" placeholder="User Info" value={userInput.userInfo} onChange={(e) => handleInputValue(e)} /> */}
+                    <input type="file" name="userProfile" className='' placeholder="User Profile" value={userInput.userMobile} onChange={(e) => handleInputValue(e)} />
+                </div>
+                <div className="inputController">
                     <textarea name="userInfo" className="userInfo" placeholder="User Info" value={userInput.userInfo} onChange={(e) => handleInputValue(e)}>
 
                     </textarea>

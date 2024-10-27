@@ -34,6 +34,9 @@ export default function Navication() {
             <Link to='/user'> User </Link>
           </li>
           <li className="listItem">
+            <Link to='/products'> Products </Link>
+          </li>
+          <li className="listItem">
             <Link to='/contact'> Contact </Link>
           </li>
         </ul>
