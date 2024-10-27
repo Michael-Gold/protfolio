@@ -126,3 +126,14 @@ button.pageBtn.active{
     display: flex;
     align-items: center;
 }
+
+@media only screen and (max-width: 900px) {
+    ul.gridLayout{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 480px) {
+    ul.gridLayout{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
