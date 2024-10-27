@@ -126,7 +126,15 @@ button.pageBtn.active{
     display: flex;
     align-items: center;
 }
-
+figure.figureLayout{
+    display: flex;
+    max-width: 100%;
+}
+img.productImage {
+    display: flex;
+    max-width: 100%;
+    width: min-content;
+}
 @media only screen and (max-width: 900px) {
     ul.gridLayout{
         grid-template-columns: repeat(2, 1fr);
