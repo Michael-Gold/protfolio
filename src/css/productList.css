@@ -118,3 +118,11 @@ button.pageBtn {
 button.pageBtn.active{
     border-color: #ec1c24;
 }
+.pagination {
+    display: flex;
+    margin-bottom: 24px;
+}
+.paginationBtnGroup {
+    display: flex;
+    align-items: center;
+}
