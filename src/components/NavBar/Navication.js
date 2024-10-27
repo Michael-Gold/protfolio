@@ -53,6 +53,9 @@ export default function Navication() {
             <Link to='/user' onClick={() => setIsOpen(false)}> User </Link>
           </li>
           <li className="listItem">
+            <Link to='/products' onClick={() => setIsOpen(false)}> Products </Link>
+          </li>
+          <li className="listItem">
             <Link to='/contact' onClick={() => setIsOpen(false)}> Contact </Link>
           </li>
         </ul>
