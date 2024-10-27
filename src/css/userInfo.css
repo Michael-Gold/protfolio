@@ -229,6 +229,7 @@ h1.userInfoMainTitle {
     padding: 20px 24px;
     border-radius: 8px;
     position: relative;
+    width: -webkit-fill-available;
 }
 .editPopupTitle>p{
     display: flex;
@@ -246,7 +247,7 @@ h1.userInfoMainTitle {
     .userInfoPageLayout{
         grid-template-columns: repeat(1, 1fr);
     }
-    .editPopup{
-        padding: 0px 14px;
+    .editPopupLayout{        
+        max-width: 400px;
     }
 }

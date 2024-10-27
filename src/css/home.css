@@ -94,8 +94,8 @@ form.UserInfoForm {
 textarea.userInfo,
 form.UserInfoForm input{
     display: flex;
-    max-width: 100%;
-    width: 540px;
+    max-width: 540px;
+    width: -webkit-fill-available;
     border: 1px solid #f5f5f5;
     border-radius: 6px;
     height: 54px;
@@ -132,7 +132,24 @@ form.UserInfoForm input:focus{
     .recentWorkContainer{
         grid-template-columns: repeat(2, 1fr);
     }
+    form.UserInfoForm,
+    .userInfoTitle,
     .userInfoLayout{
+        display: block;
+        max-width: -webkit-fill-available;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .buttonLayout,
+    .inputController {
+        display: block;
+        max-width: 100%;
+        width: -webkit-fill-available;
         padding: 0px 14px;
+    }
+    .userInfoTitle{padding: 0px 14px;}
+    textarea.userInfo, form.UserInfoForm input{
+        max-width: 100%;
+        width: -webkit-fill-available;
     }
 }
