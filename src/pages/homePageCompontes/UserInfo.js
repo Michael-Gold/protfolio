@@ -93,9 +93,9 @@ export default function UserInfo(){
                     <input type="text" name="userMobile" className={formErrors.userMobile ? 'userMobile errorMeg' : 'userMobile'} placeholder="User Mobile" value={userInput.userMobile} onChange={(e) => handleInputValue(e)} />
                 </div>
                 {formErrors.userMobile && <p style={{color: 'red',marginTop: 0}}>{formErrors.userMobile}</p>}
-                <div className="inputController">
+                {/* <div className="inputController">
                     <input type="file" name="userProfile" className='' placeholder="User Profile" value={userInput.userMobile} onChange={(e) => handleInputValue(e)} />
-                </div>
+                </div> */}
                 <div className="inputController">
                     <textarea name="userInfo" className="userInfo" placeholder="User Info" value={userInput.userInfo} onChange={(e) => handleInputValue(e)}>
 

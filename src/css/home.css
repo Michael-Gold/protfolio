@@ -132,4 +132,7 @@ form.UserInfoForm input:focus{
     .recentWorkContainer{
         grid-template-columns: repeat(2, 1fr);
     }
+    .userInfoLayout{
+        padding: 0px 14px;
+    }
 }

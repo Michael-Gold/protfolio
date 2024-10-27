@@ -246,4 +246,7 @@ h1.userInfoMainTitle {
     .userInfoPageLayout{
         grid-template-columns: repeat(1, 1fr);
     }
+    .editPopup{
+        padding: 0px 14px;
+    }
 }
