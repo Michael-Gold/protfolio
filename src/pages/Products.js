@@ -5,6 +5,7 @@ import Pagination from "./commonCompontes/Pagination";
 const Products = () => {
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
+    const [loader, setLoader] = useState(true);
     let perPage = 9;
     useEffect(() => {
         getProducts();
@@ -16,8 +17,8 @@ const Products = () => {
                 console.error(`Http error status ${res.status}`)
             }
             const resData = await res.json();
-            console.log('resData',resData);
             setProducts(resData.products);
+            setLoader(false);
         } catch (error) {
             console.log('Error: ',error)            
         }
@@ -39,13 +40,24 @@ const Products = () => {
                 <div className="mainTitle">
                     <h1>Product Lists</h1>
                 </div>
+                {loader ? (
+                    <div className="loaderSection">
+                        <div className="loader">
+                            <img src="/images/profile.png" alt="Logo" className="loaderLogo" />
+                            <div className="spinner"></div>
+                        </div>
+                    </div>
+                ) : (
                 <div className="productsListContainer">
                     {products && products.length > 0 && 
                         <ul className="gridLayout">
                             {productList.map((product,index) => (
                                 <li key={index} className="productList">
                                     <figure className="figureLayout">
+                                        {product.thumbnail ? (
                                         <img src={product.thumbnail} alt={product.title} className="productImage" />
+                                        ) : (<img src='https://placehold.co/500x300?text=Product+Image' alt='Product' className="productImage" />)}
+                                        
                                     </figure>
                                     <div className="productListContent px-14">
                                         <h3 className="productTitle">{product.title}</h3>
@@ -83,6 +95,7 @@ const Products = () => {
                         </ul>
                     }
                 </div>
+                )}
                 <div className="pagination">
                     <Pagination currentPage = {currentPage} totalPage = {products.length} perPage = {perPage} setCurrentPage = {setCurrentPage} />
                 </div>
